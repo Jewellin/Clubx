@@ -1,6 +1,6 @@
 # clubx
 
-> A Vue.js project
+> A Vue.js project  
 > 基于Vue框架和mint-ui的一个练习
 
 ## Build Setup
