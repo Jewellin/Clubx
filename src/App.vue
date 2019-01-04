@@ -3,15 +3,29 @@
     <!-- Header -->
     <mt-header fixed title="Clubx"></mt-header>  
 
-    <!-- Tab -->
-    <mt-navbar class="navbar-bottom" v-model="selected">
-      <mt-tab-item id="1"><span class="el-icon-menu"></span>首页</mt-tab-item>
-      <mt-tab-item id="2"><span class="el-icon-message"></span>社团信息</mt-tab-item>
-      <mt-tab-item id="3"><span class="el-icon-news"></span>社团活动</mt-tab-item>
-      <mt-tab-item id="4"><span class="el-icon-more"></span>设置</mt-tab-item>
-    </mt-navbar>
+    <router-view></router-view>
 
-    <router-view/>
+    <!-- Tabbar -->
+    <mt-navbar class="navbar-bottom" v-model="selected">      
+      <mt-tab-item id="1">
+        <router-link to="/" tag="div"><span class="el-icon-menu"></span></router-link>首页
+      </mt-tab-item>      
+      <mt-tab-item id="2">        
+        <router-link to="/clubInfo" tag="div">
+          <el-badge :value="2" class="item">
+            <span class="el-icon-message"></span>  
+          </el-badge>
+        </router-link>
+        社团信息
+      </mt-tab-item>      
+      <mt-tab-item id="3">
+        <router-link to="/clubActi" tag="div"><span class="el-icon-news"></span></router-link>社团活动
+      </mt-tab-item>            
+      <mt-tab-item id="4">
+        <router-link to="/setting" tag="div"><span class="el-icon-more"></span></router-link>设置
+      </mt-tab-item>      
+    </mt-navbar>
+    
   </div>
 </template>
 
@@ -44,8 +58,10 @@ export default {
   z-index: 1;
   border: 1px solid #ccc;
   background-color: rgb(238, 243, 243);
+  cursor: pointer;
 }
 .navbar-bottom span {
   display: block;
+  font-size: 20px;
 }
 </style>

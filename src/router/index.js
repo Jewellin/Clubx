@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Help from '@/components/Help'
-import Info from '@/components-sub/Info'
-import Num from '@/components-sub/Num'
+import Home from '@/components/tabbar/Home'
+import ClubInfo from '@/components/tabbar/ClubInfo'
+import ClubActi from '@/components/tabbar/ClubActi'
+import Setting from '@/components/tabbar/Setting'
 
 //手动安装VueRouter
 Vue.use(Router)
@@ -12,17 +12,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect: '/home',
     },
     {
-      path: '/help',
-      name: 'Help',
-      component: Help,
-      children: [
-        { path: 'info', name: 'Info', component: Info },
-        { path: 'num', name: 'Num', component: Num }
-      ]
+      path: '/clubInfo',      
+      component: ClubInfo
+    },
+    {
+      path: '/clubActi',    
+      component: ClubActi
+    },
+    {
+      path: '/setting',      
+      component: Setting
     }
   ]
 })
