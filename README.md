@@ -26,5 +26,9 @@ npm run e2e
 # run all tests
 npm test
 ```
-
+  
+### Idea
+  
+  这次的练习和实验希望能顺利，遇到的问题都鞥解决，然后做出一个完整的网站
+  
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
