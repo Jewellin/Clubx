@@ -3,10 +3,12 @@
     <!-- Header -->
     <mt-header fixed title="Clubx"></mt-header>  
 
-    <router-view></router-view>
+    <transition>
+      <router-view></router-view>
+    </transition>
 
     <!-- Tabbar -->
-    <mt-navbar class="navbar-bottom" v-model="selected">      
+    <mt-navbar class="navbar-bottom">      
       <mt-tab-item id="1">
         <router-link to="/" tag="div"><span class="el-icon-menu"></span></router-link>首页
       </mt-tab-item>      
@@ -40,7 +42,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -48,6 +50,21 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+// 动画
+.v-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.v-leave-to {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all 1s ease;
 }
 
 .navbar-bottom {

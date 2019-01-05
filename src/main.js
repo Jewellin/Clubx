@@ -1,9 +1,10 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-import { Badge } from 'element-ui';
+import animate from 'animate.css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import { Badge } from 'element-ui'
 import { Button, Spinner, Header, Navbar, TabItem } from 'mint-ui'
 import App from './App'
 import router from './router'
