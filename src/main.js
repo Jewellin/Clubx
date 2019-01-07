@@ -8,6 +8,7 @@ import { Badge } from 'element-ui'
 import { Button, Spinner, Header, Navbar, TabItem, Swipe, SwipeItem } from 'mint-ui'
 import App from './App'
 import router from './router'
+import VueResource from 'vue-resource'
 
 
 //element-ui的组件导入
@@ -24,6 +25,7 @@ Vue.component(SwipeItem.name, SwipeItem)
 
 // Vue.use(MintUI)
 
+Vue.use(VueResource)
 
 Vue.config.productionTip = false
 
