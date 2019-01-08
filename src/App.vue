@@ -67,6 +67,7 @@ export default {
   transition: all 1s ease;
 }
 
+// Tabbar
 .navbar-bottom {
   bottom: 0;
   right: 0;
