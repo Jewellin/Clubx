@@ -1,7 +1,7 @@
 # clubx
 
-> A Vue.js project  
-> 基于Vue框架和mint-ui的一个练习
+> A Vue.js project.(practice)  
+> 基于Vue框架和Element的一个练习
 
 ## Build Setup
 
